@@ -1,6 +1,6 @@
 {
   "name": "02-bases",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Esta es mi primera app real de Node",
   "main": "app.js",
   "scripts": {
@@ -9,8 +9,12 @@
     "dev": "nodemon src/app.js"
   },
   "author": "Daniel Garmendia",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "get-age": "^1.0.1",
+    "uuid": "^9.0.0"
   }
 }
