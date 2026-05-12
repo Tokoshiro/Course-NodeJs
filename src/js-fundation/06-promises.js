@@ -1,23 +1,14 @@
 
 
-const getPokemonById = (id, callback) =>{
+const getPokemonById = (id) =>{
 
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
 
-    fetch( url ).then( (response) => {
-        
-        response.json().then( (pokemon) => {
+    return fetch( url )
+        .then( (response) => response.json())
+        //.then( () => {throw new Error('Error al obtener el pokemon')})        
+        .then( (pokemon) => pokemon.name);
 
-            //console.log(pokemon.name);
-
-            callback(pokemon.name);
-        });
-        
-    });
-
-
-
-    //return 'Pokemon';
 }
 
 module.exports = getPokemonById;

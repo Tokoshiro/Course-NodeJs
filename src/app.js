@@ -10,11 +10,10 @@ const { getUUID, getAge } = require('./plugins');
 
 const getPokemonById = require('./js-fundation/06-promises');
 
-getPokemonById(1, (pokemon) => {
-
-    console.log(pokemon);
-
-});
+getPokemonById(1)
+    .then( (pokemon) => console.log({pokemon}))
+    .catch( (error) => console.log({'Por favor intenta de nuevo': error.message}))
+    .finally( () => console.log('Proceso terminado') );
 
 
 
