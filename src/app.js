@@ -1,7 +1,19 @@
 
 //sintaxis de importación tradicional de módulos
-const {emailTEmplate} = require('./js-fundation/01-template');
+const {getUserById} = require('./js-fundation/03-callbacks');
 
-require('./js-fundation/02-destructuring');
+//require('./js-fundation/02-destructuring');
+//require('./js-fundation/03-callbacks');
 
 //console.log(emailTEmplate);
+
+const id = 1;
+
+getUserById( id, function (error, user) {
+    if (error) {
+        throw new Error(error);
+    }
+
+    console.table({user});
+
+} );
