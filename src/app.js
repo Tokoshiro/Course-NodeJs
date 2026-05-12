@@ -1,6 +1,6 @@
 
 //sintaxis de importación tradicional de módulos
-const {getUserById} = require('./js-fundation/03-callbacks');
+const {getUserById} = require('./js-fundation/04-arrow');
 
 //require('./js-fundation/02-destructuring');
 //require('./js-fundation/03-callbacks');
@@ -9,7 +9,8 @@ const {getUserById} = require('./js-fundation/03-callbacks');
 
 const id = 1;
 
-getUserById( id, function (error, user) {
+getUserById( id, (error, user) => {
+    
     if (error) {
         throw new Error(error);
     }
